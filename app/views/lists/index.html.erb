@@ -1,9 +1,6 @@
-<div class="home-banner">
-  <h1><span id="banner-typed-text"></span></h1>
-    <h1 class="banner-arrow">⌵</h1>
-</div>
-
-<div class="container">
-  <div class="row cards">
-    </div>
-</div>
+<h1>Lists of movies</h1>
+<ol>
+  <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+  <% end %>
+</ol>

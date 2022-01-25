@@ -1,5 +1,10 @@
+<h1><%= @list.name%></h1>
+<ol>
+<% @list.movies.each do |movie|%>
+  <%=link_to "#{movie.title}", "#{poster_url}" %>
+  <li><%=movie.ovierview %></li>
+  <li><%= movie.rating %></li>
+  <% end %>
+</ol>
 
-<div class="container">
-  <div class="card-show-title">
-    <h1>Movies</h1>
-  </div>
+<%= link_to 'back to all lists', lists_path %>
